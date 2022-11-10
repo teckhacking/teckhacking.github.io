@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    user-select: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    /* background:linear-gradient(-35deg,#33ccff,#81d5ff,#ffccff,#81d5ff); */
+    /* background-color: #4158D0;
+background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); */
+background-color: #85FFBD;
+background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+
+
+}
+.container{
+    width: 90%;
+    height: 90vh;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+}
+.container .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 25px;
+    margin-top: 1em;
+}
+.container .navbar .logo{
+    display: flex;
+    align-items: center;
+}
+.container .navbar .logo .logoname{
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-left: .5em;
+}
+.container .navbar .searchbox{
+    position: relative;
+
+}
+.container .navbar .searchbox input{
+    padding: 8px 120px 8px 20px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+.container .navbar .searchbox input:focus{
+    padding: 8px 200px 8px 20px;
+}
+.container .navbar .searchbox .fas{
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    background-color: #85FFBD;
+    padding: 6px;
+    border-radius: 50%;
+    color: #fff;
+}
+.container .navbar .navitem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .navbar .navitem .icons{
+    position: relative;
+    right: 1em;
+}
+.container .navbar .navitem .icons ul li{
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 12px;
+    color: 	#FF8C00;
+}
+.container .navbar .navitem .icons ul li i{
+    background-color: #fff;
+    padding: 15px;
+    color: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.container-body{
+    display: grid;
+    grid-template-columns: 18% auto;
+    gap: 20px;
+}
+.container-body .sidebar{
+    margin: 20px 0 20px 20px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius: 14px;
+    height: 70vh;
+}
+.container-body .sidebar ul li{
+    padding: 10px ;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.container-body .sidebar ul li a{
+    text-transform: capitalize;
+    font-weight: 700;
+    color: #000;
+}
+.container-body .sidebar ul li.active{
+    background: #FFFB7D;
+    border-radius: 8px;
+
+}
+.container-body .sidebar ul li:hover{
+    background: #FFFB7D;   
+    border-radius: 8px;
+}
+.main-body{
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    margin: 20px 20px 20px 0;
+ 
+}
+.main-body nav{
+    display: flex;
+    width: auto;
+    background-color: #85FFBD;
+    height: 50px;
+    margin: 10px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 0, 0);
+    font-size: 18px;
+}
+.popup{
+    width: 600px;
+    height: 400px;
+    background: #fff;
+    position: absolute; 
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    left: 50%;
+    border-radius: 8px;
+    transform: translate(-50%,-50%);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+.popup h1{
+    margin-top: -50px;
+    margin-bottom: 20px;
+}
+.popup p{
+    margin-top: 30px;
+    text-align: center;
+}
+.popup .buttons{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.popup button{   
+    padding: 8px 40px;    
+    cursor: pointer;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    color: #fff;
+    background: #880ED4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.mobile{
+    display: none;
+    align-items: center;
+}
+@media only screen and (max-width: 600px) {
+    .container {
+      display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    
+  }
+  @media only screen and (max-width: 1200px){
+    .off{
+        display: none;
+    }
+    .container-body .sidebar ul li{
+        padding: 10px;
+        background-color: #FFFB7D;
+    }
+    .container-body .sidebar ul li a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }

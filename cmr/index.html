@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vardhan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="mobile">
+        <p>Your device is not supported, kindly open in pc/laptop/computer </p>
+    </div>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" width="80px" alt="">
+                <span class="logoname">CMR IT</span>
+            </div>
+            <div class="searchbox">
+                <form action="">
+                    <input type="text" name="" id="" placeholder="search">
+                    <i class="fas fa-search"></i>
+                </form>
+            </div>
+            <div class="navitem">
+                <div class="icons">
+                    <ul>
+                        <li>                            
+                            <a href="#" onclick="mute()"> <i id="red" class="fa fa-bell"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <audio id="audio">
+            <source src="audio/games.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="audio2">
+            <source src="audio/2.mp3" type="audio/mpeg">
+        </audio>
+        <div class="popup" id="popup">
+            <h1>Hi! Visitor</h1>
+            <p>Welcome to our Website, <br>by clicking ok you will listen some music</p>
+            <div class="buttons">
+                <button onclick="popup()">Thrones</button>
+                <button onclick="popup1()">Carols</button>
+            </div>
+
+        </div>
+        <div class="container-body">
+            <div class="sidebar">
+                <ul>
+                    <li class="active">
+                        <a href="#">
+                            <i class="fa fa-home"></i> <span class="off">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-user"></i> <span class="off">Student Login</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-book"></i> <span class="off">Syllabus</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-address-book"></i> <span class="off">Contact Us</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-user"></i> <span class="off">Student Login</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-book"></i> <span class="off">Syllabus</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="main-body">
+                <nav>
+                    <marquee>Welcome to CMRIT this page is created by vardhan</marquee>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var audio = document.getElementById("audio");
+        var audio2 = document.getElementById("audio2");
+
+        function mute() {
+            audio.muted = true;
+            audio2.muted = true;
+            document.getElementById('red').style.color = "red";
+        }
+        function popup() {
+            audio.play();
+            document.getElementById('popup').style.display = 'none';
+        }
+        function popup1() {
+            audio2.play();
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>
